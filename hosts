@@ -1,0 +1,22 @@
+#192.168.33.10
+#192.168.33.30
+#192.168.33.40
+
+[targets]
+localhost	ansible_connection=local
+192.168.33.10	ansible_connection=ssh	ansible_user=vagrant
+192.168.33.30	ansible_connection=ssh	ansible_user=root
+192.168.33.40	ansible_connection=ssh 	ansible_user=devops
+
+
+[dev]
+192.168.33.10	ansible_connection=ssh	ansible_user=vagrant
+192.168.33.30	ansible_connection=ssh	ansible_user=root
+
+[prod]
+192.168.33.40	ansible_connection=ssh	ansible_user=vagrant
+
+[ansible_ssh_user]
+192.168.33.10
+192.168.33.30
+192.168.33.40
